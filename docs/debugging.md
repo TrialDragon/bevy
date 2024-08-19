@@ -14,5 +14,6 @@ When a suspected wgpu error occurs, you should capture a wgpu trace so that Bevy
 To capture a wgpu trace:
 
 1. Create a new `wgpu_trace` folder in the root of your cargo workspace
-2. Add the "wgpu_trace" feature to the bevy crate. (ex: `cargo run --example features wgpu_trace`)
-3. Zip up the wgpu_trace folder and attach it to the relevant issue. New wgpu issues should generally be created [in the wgpu repository](https://github.com/gfx-rs/wgpu). Please include the wgpu revision in your bug reports. You can find the revision in the `Cargo.lock` file in your workspace.
+2. Pull in the `wgpu` crate matching the `bevy` crate's version. (e.g., `cargo add wgpu@*`)
+3. Add the `trace` feature to the `wgpu` crate. (e.g., `cargo run --example features wgpu/trace`)
+4. Zip up the wgpu_trace folder and attach it to the relevant issue. New wgpu issues should generally be created [in the wgpu repository](https://github.com/gfx-rs/wgpu). Please include the wgpu revision in your bug reports. You can find the revision in the `Cargo.lock` file in your workspace.
